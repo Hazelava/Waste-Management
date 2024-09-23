@@ -1,0 +1,88 @@
+
+- 👋 Hi, I’m @Hazelava
+- 👀 I’m interested in 
+- 🌱 I’m currently learning 
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+- 😄 Pronouns: she
+- ⚡ Fun fact: 
+
+<!---
+Hazelava/Hazelava is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collection Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Waste Collection Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#monitor">Monitor Bin Status</a></li>
+                <li><a href="#routes">Track Collection Routes</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to the Waste Collection Service</h2>
+        <p>Your one-stop solution for efficient and timely waste management.</p>
+        <div class="image-gallery">
+            <img src="images/waste-management1.jpg" alt="Waste management">
+            <img src="images/waste-management2.jpg" alt="Waste collection">
+            <img src="images/waste-management3.jpg" alt="Recycling">
+        </div>
+    </section>
+
+    <!-- Alerts Section -->
+    <section id="alerts">
+        <h2>View Alerts</h2>
+        <div id="alert-message"></div>
+    </section>
+
+    <!-- Monitor Bin Status Section -->
+    <section id="monitor">
+        <h2>Monitor Bin Status</h2>
+        <p>Select your location to monitor the status of bins:</p>
+        <select id="bin-location" onchange="updateBinStatus()">
+            <option value="">Select Location</option>
+            <option value="downtown">Downtown</option>
+            <option value="suburbs">Suburbs</option>
+            <option value="industrial">Industrial Area</option>
+        </select>
+        <p id="bin-status"></p>
+    </section>
+
+    <!-- Track Collection Routes Section -->
+    <section id="routes">
+        <h2>Track Collection Routes</h2>
+        <div id="map"></div> <!-- Google Map for tracking -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to <a href="mailto:support@wastecollection.com">email us</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Waste Collection Service. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
