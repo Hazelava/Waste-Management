@@ -1,17 +1,20 @@
 
 - 👋 Hi, I’m @Hazelava
-- 👀 I’m interested in 
-- 🌱 I’m currently learning 
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 👀 I’m interested in coding, building websites, and creating small games
+- 🌱 I’m currently learning computer science and different fields to fit in one parallely i am learning diiferent programming language , cybersecurity as well
+- 💞️ I’m looking to collaborate on "I’m looking to collaborate on web development projects, coding challenges, and creating fun small games."
+- 📫 How to reach me , you can reach me through github 
 - 😄 Pronouns: she
-- ⚡ Fun fact: 
+- ⚡ Fun fact:  I love blending creativity and code to build interactive websites and small games!
 
 <!---
-Hazelava/Hazelava is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Hazelava/Hazelava is a ✨ special ✨ repository because its `README.md` "WASTE MANAGEMENT WESITE" appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
 
+WASTE MANAGEMENT SYSTEM WEBSITE
+
+HTML 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,3 +89,126 @@ You can click the Preview link to take a look at your changes.
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
+
+
+CSS
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+select {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#bin-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+JAVASCRIPT
+
+// Function to display bin status based on location
+function updateBinStatus() {
+    const location = document.getElementById('bin-location').value;
+    const binStatusElement = document.getElementById('bin-status');
+
+    let statusMessage = '';
+
+    switch(location) {
+        case 'downtown':
+            statusMessage = 'Downtown bins are 75% full.';
+            break;
+        case 'suburbs':
+            statusMessage = 'Suburban bins are 50% full.';
+            break;
+        case 'industrial':
+            statusMessage = 'Industrial bins are 90% full. Immediate attention required!';
+            break;
+        default:
+            statusMessage = 'Please select a location to view bin status.';
+    }
+
+    binStatusElement.textContent = statusMessage;
+}
+
+// Function to show alert messages
+function showAlertMessage() {
+    const alertMessageElement = document.getElementById('alert-message');
+    alertMessageElement.innerHTML = '<strong>Next collection:</strong> Monday, 9 AM. <br><em>No other alerts at the moment.</em>';
+}
+
+// Google Maps initialization for tracking collection routes
+function initMap() {
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: { lat: 37.7749, lng: -122.4194 }  // Example coordinates (San Francisco)
+    });
+
+    const marker = new google.maps.Marker({
+        position: { lat: 37.7749, lng: -122.4194 },
+        map: map,
+        title: 'Collection Truck'
+    });
+}
+
+// Display the alert message when the page loads
+document.addEventListener('DOMContentLoaded', showAlertMessage);
+
